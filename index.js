@@ -1,3 +1,5 @@
+const { handleMessage, handlePostback } = require('./app');
+
 const
     express = require('express'),
     bodyParser = require('body-parser'),
