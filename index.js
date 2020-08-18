@@ -50,7 +50,7 @@ app.get('/webhook', (req, res) => {
 
     // Your verify token. Should be a random string.
     // let VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>"
-    let VERIFY_TOKEN = "1234"
+    let VERIFY_TOKEN = "EAALOQZCxWyXsBAJJOcdRdyopbavGmfNrpAr5iX82dKXtyQxYSKiHNdPjp7GMxXKLRBfgbGdrchnZBZC36l2Ne0AwYGgh3V01fMl4R3UxUkPsd0QPlWIdYn623qRjo7rfy6rdGatZCd3bHfnK8BVKWU79kX4IH7sOPMK9TePymZAwMTBnE0v53"
 
 
     // Parse the query params
