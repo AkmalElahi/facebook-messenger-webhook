@@ -1,5 +1,6 @@
 // Handles messages events
 const request = require('request');
+const token = "EAALOQZCxWyXsBAJJOcdRdyopbavGmfNrpAr5iX82dKXtyQxYSKiHNdPjp7GMxXKLRBfgbGdrchnZBZC36l2Ne0AwYGgh3V01fMl4R3UxUkPsd0QPlWIdYn623qRjo7rfy6rdGatZCd3bHfnK8BVKWU79kX4IH7sOPMK9TePymZAwMTBnE0v53"
 function handleMessage(sender_psid, received_message) {
 
     let response;
@@ -77,7 +78,7 @@ function callSendAPI(sender_psid, response) {
     request({
         "uri": "https://graph.facebook.com/v2.6/me/messages",
         // "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
-        "qs": { "access_token": '1234' },
+        "qs": { "access_token": token },
         "method": "POST",
         "json": request_body
     }, (err, res, body) => {
