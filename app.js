@@ -89,8 +89,16 @@ function callSendAPI(sender_psid, response) {
         }
     });
 }
+function handleDelivery(sender_psid, response){
+    console.log('INSIDE DELIVERY', sender_psid, response)
+}
 
+function handleReads(sender_psid, response){
+    console.log('INSIDE READS', sender_psid, response)
+}
 module.exports = {
     handleMessage,
     handlePostback,
+    handleDelivery,
+    handleReads
 }

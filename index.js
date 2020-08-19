@@ -1,4 +1,4 @@
-const { handleMessage, handlePostback } = require('./app');
+const { handleMessage, handlePostback, handleDelivery, handleReads } = require('./app');
 
 const
     express = require('express'),
@@ -34,6 +34,12 @@ app.post('/webhook', (req, res) => {
                 handleMessage(sender_psid, webhook_event.message);
             } else if (webhook_event.postback) {
                 handlePostback(sender_psid, webhook_event.postback);
+            }
+            else if (webhook_event.message_deliveries) {
+                handleDelivery(sender_psid, webhook_event.message_deliveries);
+            }
+            else if (webhook_event.postback) {
+                handleReads(sender_psid, webhook_event.message_reads);
             }
         });
 
