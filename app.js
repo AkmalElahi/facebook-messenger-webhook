@@ -6,6 +6,7 @@ function handleMessage(sender_psid, received_message) {
     let response;
 
     // Check if the message contains text
+    console.log("MESSAGE ECHO", received_message.is_echo)
     if (received_message.text) {
 
         // Creates the payload for a basic text message, which
